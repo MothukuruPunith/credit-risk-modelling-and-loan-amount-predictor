@@ -1,4 +1,4 @@
-pip install --upgrade pip
+
 alembic==1.15.1
 altair==5.5.0
 annotated-types==0.7.0
@@ -191,4 +191,5 @@ widgetsnbextension==4.0.14
 WTForms==3.2.1
 xgboost==3.0.5
 yarg==0.1.10
+
 
