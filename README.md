@@ -1,111 +1,157 @@
-🏦 Credit Risk Modelling & Loan Amount Predictor
+# 🏦 Credit Risk Modelling & Loan Amount Predictor
 
-This project focuses on predicting loan approval amounts and assessing credit risk using machine learning techniques. It includes end-to-end steps from data preprocessing, EDA, feature engineering, model training, and evaluation.
-📁 Project Structure
+A complete machine learning project that predicts **loan approval status** and **eligible loan amount** using applicant financial and demographic information.
+
+---
+
+## 📁 Project Structure
+
+```txt
 credit-risk-modelling-and-loan-amount-predictor/
 │
-├── data/                     # Dataset used for training & evaluation
-│   └── loan_data.csv         
+├── artifacts/                    # Stored trained model files
+│   └── model.pkl                 # Saved ML model
 │
-│
-├── src/                      # Core Python scripts
-│   ├── data_preprocessing.py # Handling missing values, encoding, scaling
-│   ├── model.py              # ML model building & evaluation
-│   └── utils.py              # Helper functions
-│
-├── models/                   # Saved trained models
-│   └── loan_model.pkl
-│
-├── requirements.txt          # Python dependencies
+├── main.py                       # Main script for training the model
+├── prediction_helper.py          # Script to load model & predict outputs
+├── requirements.txt              # Project dependencies
+├── LICENSE
 └── README.md
-Clean and preprocess raw loan applicant data
+```
 
-Perform detailed exploratory data analysis
+---
 
-Handle missing values, outliers & categorical encoding
+## 🚀 Features
 
-Feature engineering to improve model accuracy
+- End-to-end ML workflow (cleaning → preprocessing → model training → evaluation)
+- Handles missing values, categorical encoding, scaling & normalization
+- Trains multiple ML models (Logistic Regression, Random Forest, XGBoost)
+- Predicts:
+  - **Loan Status (Approved / Not Approved)**
+  - **Loan Amount (if eligible)**
+- Saves model to `artifacts/`
+- Simple prediction script for quick testing
 
-Train multiple ML models (Random Forest, XGBoost, etc.)
+---
 
-Predict:
+## 📊 Machine Learning Pipeline
 
-Whether a loan should be approved
+### 🔍 Preprocessing
+- Handle missing values  
+- One-hot encoding  
+- Standardization / normalization  
+- Train/Test split  
 
-Approximate loan amount for approved applicants
+### 📈 EDA
+- Distribution plots  
+- Correlation heatmap  
+- Outlier detection  
 
-Model evaluation with accuracy, precision, recall, ROC-AUC
+### 🤖 Model Training
+- Logistic Regression  
+- Random Forest  
+- XGBoost (optional)
 
-Export the trained model for deployment
+### 🧪 Evaluation
+- Accuracy  
+- Confusion Matrix  
+- Precision / Recall  
+- ROC-AUC  
 
-🧠 Machine Learning Techniques Used
+### 🔮 Prediction System
+`prediction_helper.py` loads the model and predicts approval + loan amount.
 
-Classification Models
+---
 
-Logistic Regression
+## 🛠️ Technologies Used
 
-Random Forest Classifier
+### Core
+- Python  
+- Pandas, NumPy  
+- Scikit-learn  
+- Matplotlib, Seaborn  
+- XGBoost  
 
-XGBoost Classifier
+### Optional
+- Joblib/Pickle for saving models  
+- Jupyter Notebook  
 
-Regression Models
+---
 
-Linear Regression
+## 📦 Installation & Setup
 
-Random Forest Regressor
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/MothukuruPunith/credit-risk-modelling-and-loan-amount-predictor.git
+cd credit-risk-modelling-and-loan-amount-predictor
+```
 
-Preprocessing
+### 2️⃣ Create Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
+```
 
-One-hot encoding
+### 3️⃣ Install Requirements
+```bash
+pip install -r requirements.txt
+```
 
-Standardization / normalization
+### 4️⃣ Train the Model
+```bash
+python main.py
+```
 
-Train/Test split
+Model will be saved to:
+```
+artifacts/model.pkl
+```
 
-🛠️ Technologies Used
-Core
+### 5️⃣ Run Prediction Script
+```bash
+python prediction_helper.py
+```
 
-Python
+---
 
-NumPy & Pandas (data manipulation)
+## 🔍 Example Output
 
-Matplotlib & Seaborn (EDA & visualization)
+```
+Loan Approval Status: Approved
+Predicted Loan Amount: ₹180,000
+```
 
-Scikit-learn (model training)
+---
 
-XGBoost (advanced modelling)
+## 📄 requirements.txt (key packages)
 
-Optional
+```txt
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+joblib
+```
 
-Jupyter Notebook for step-by-step modelling
+---
 
-Joblib/Pickle for model persistence
+## 👨‍💼 Author
 
-📦 Installation & Setup
-1. Clone the Repository
-2. Create Virtual Environment
-   python -m venv venv
-   source venv/bin/activate  # Mac/Linux
-   venv\Scripts\activate     # Windows
+**Punith Mothukuru**  
+ML & GenAI Enthusiast  
+SRM Institute of Science and Technology  
 
-3. Install Requirements
-   pip install -r requirements.txt
-▶️ Running the Project
-python src/data_preprocessing.py
-python src/model.py
+---
 
-👨‍💼 Author
+## 📬 Contributions
 
-Name: Punith
-Domain: Machine Learning & Credit Risk Modelling
-Institution: SRM Institute of Science and Technology
+Feel free to open issues or contribute with pull requests.
 
-📬 Feedback & Contributions
-Pull requests and suggestions are welcome.
-If you find issues, feel free to raise them!
+---
 
-📌 Note
+## 📌 Note
 
-This project is intended for educational & analytical purposes.
-Dataset values may be synthetic or anonymized.
-Not intended for real-world financial decisions.
+This project is meant for learning and demonstration only.
